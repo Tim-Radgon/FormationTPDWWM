@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 15</title>
+
+</head>
+
+<body>
+    Objectif : Afficher à l'écran les nombres premiers d'un tableau, un nombre premier est un nombre qui n'est divisible
+    que par 1 et lui même.
+    <script>
+        let valeurs = [100, 136, 7, 22, 109, 48, 191, 56, 157, 121, 81, 84, 95, 40,
+            115, 13, 95, 73, 188, 29, 66, 32, 119, 176, 194, 26, 29, 101,
+            131, 9, 81, 115, 142, 134, 150, 172, 81, 58, 184, 35, 120, 141,
+            194, 20, 42, 168, 189, 160, 146, 21, 88, 189, 79, 30, 101, 57,
+            129, 124, 84, 68, 49, 125, 87, 23, 119, 188, 110, 8, 129, 64,
+            185, 2, 24, 30, 164, 194, 114, 9, 62, 99, 50, 74, 146, 150, 6,
+            39, 171, 40, 17, 143, 4, 54, 197, 133, 60, 7, 21, 19, 126, 194]
+
+        //on ne prend pas en compte les cas 0, 1, et 2
+
+        //une première boucle pour parcourir notre tableau de valeurs
+        for (let i = 0; i < valeurs.length; i++) {
+            //on part du principe que le nombre est premier jusqu'à ce qu'on tombe sur un diviseur pour ce nombre
+            let estPremier = true
+            //une deuxième boucle pour énumérer tous les diviseurs possible de cette valeur entre 2 et elle même
+            for (let j = 2; j < valeurs[i]; j++) {
+                //on teste si la valeur est divisible par un diviseur potentiel
+                if (valeurs[i] % j == 0) {
+                    //si c'est le cas, on indique que le nombre n'est pas premier
+                    estPremier = false
+                }
+            }
+            //en se basant sur notre booléen estPremier, on décide ou pas d'afficher qu'un nombre est premier
+            if (estPremier) {
+                console.log(valeurs[i], "premier")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

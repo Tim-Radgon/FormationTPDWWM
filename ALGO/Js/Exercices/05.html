@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 5</title>
+
+</head>
+
+<body>
+    Objectif : à partir de deux nombres entiers, afficher la somme de tous les nombres pairs contenus entre ces deux
+    nombres.
+    <script>
+        let a = +prompt("Entrez le premier nombre")
+        let b = +prompt("Entrez le deuxième nombre")
+        let resultat = 0
+        //pour ne pas prendre en compte a et b, on commence à a+1 
+        //et on s'arrête juste avant b à l'aide de l'inferiorité stricte
+        for (let i = a + 1; i < b; i = i + 1) {
+            //pour tester si chaque nombre i est pair, on vérifie que son modulo (le reste de la division) 2 soit égal à 0, signifiant qu'il est bien multiple de 2
+            if (i % 2 == 0) {
+                resultat = resultat + i
+            }
+        }
+        console.log(resultat)
+    </script>
+</body>
+
+</html>

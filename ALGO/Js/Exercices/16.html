@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 16</title>
+</head>
+
+<body>
+    Objectif: Afficher si une année donnée est bissextile ou non. une année
+    est bissextile si elle est divisible par 4, sans être divisible par 100,
+    ou si elle est divisible par 400
+    <script>
+        let annee = +prompt("entrez une année")
+        if (annee % 4 == 0 && annee % 100 != 0 || annee % 400 == 0) {
+            console.log("bissextile")
+        }
+    </script>
+</body>
+
+</html>

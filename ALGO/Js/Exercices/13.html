@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 13</title>
+</head>
+
+<body>
+    Objectif : Afficher la valeur maximale trouvée dans le tableau
+    <script>
+        let nombres = [85, 25, 57, 30, 74, 3, 86, 17, 11, 6, 30, 15, 16, 99, 80, 77,
+            48, 23, 23, 48, 99, 11, 5, 66, 53, 13, 74, 45, 77, 72, 74, 95,
+            63, 77, 17, 72, 63, 63, 10, 94, 41, 51, 9, 97, 11, 2, 90, 38,
+            73, 55]
+
+        //on prépare un maximum neutre
+        let valeurMax = nombres[0]
+        //on parcours toutes les cases de notre tableau
+        for (let i = 0; i < nombres.length; i++) {
+            //si une valeur trouvée dans le tableau est supérieure au maximum
+            if (nombres[i] > valeurMax) {
+                //cette valeur est le nouveau maximum
+                valeurMax = nombres[i]
+            }
+        }
+        //on affiche le maximum à la fin de la boucle
+        console.log(valeurMax)
+    </script>
+</body>
+
+</html>
