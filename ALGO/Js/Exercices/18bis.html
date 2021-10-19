@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 18</title>
+</head>
+
+<body>
+    Objectif: Compter les voyelles dans une chaîne de caractères
+    <script>
+        //AUTRE SOLUTION
+        //on prépare un tableau de voyelles à parcourir
+        let voyelles = ["a", "e", "i", "o", "u", "y"];
+        nbVoyelles = 0;
+        for (let i = 0; i < phrase.length; i++) {
+            //pour chaque caractère on vérifie s'il est une voyelle ou non
+            for (let j = 0; j < voyelles.length; j++) {
+                //on fait le tour de nos voyelles et on compare a chaque fois avec notre caractère
+                if (phrase[i] == voyelles[j]) {
+                    //si on trouve une voyelle on incrémente
+                    nbVoyelles++;
+                    //et on arrête la boucle
+                    break;
+                }
+            }
+        }
+        //enfin, on affiche le compte final
+        console.log(nbVoyelles);
+    </script>
+</body>
+
+</html>
