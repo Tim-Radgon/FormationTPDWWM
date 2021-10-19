@@ -13,7 +13,10 @@
     <script>
         let annee = +prompt("entrez une année")
         if (annee % 4 == 0 && annee % 100 != 0 || annee % 400 == 0) {
-            console.log("bissextile")
+            alert(`${annee} est bissextiles`)
+        } else {
+            alert(`${annee} n'est pas bissextiles`)
+
         }
     </script>
 </body>

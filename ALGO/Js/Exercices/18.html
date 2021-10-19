@@ -9,11 +9,28 @@
 <body>
     Objectif: Compter les voyelles dans une chaîne de caractères
     <script>
-        let phrase = prompt("entrez une phrase")
-        let voyelle = ["a", "e", "u", "i", "o"]
-
-
-
+        //pour normaliser notre chaine de caractères et simplifier notre condition par la suite
+        //on passe le résultat du prompt(notre phrase) en minuscule à l'aide de toLowerCase()
+        let phrase = prompt("entrez une phrase").toLowerCase()
+        //on prépare un compteur
+        let nbVoyelles = 0
+        //on parcours notre phrase
+        for (let i = 0; i < phrase.length; i++) {
+            //pour chaque caractère on vérifie s'il est une voyelle ou non
+            if (
+                phrase[i] == "a" ||
+                phrase[i] == "e" ||
+                phrase[i] == "i" ||
+                phrase[i] == "o" ||
+                phrase[i] == "u" ||
+                phrase[i] == "y"
+            ) {
+                //si c'est le cas, on incrémente notre compteur
+                nbVoyelles++
+            }
+        }
+        //enfin, on affiche le compte final
+        console.log(nbVoyelles)
     </script>
 </body>
 

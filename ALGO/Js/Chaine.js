@@ -17,7 +17,7 @@ let politesse2 = `Comment ça va ${exemple}?`
 
 //les strings possèdent aussi un panel de fonctions utiles
 //par exemple pour manipuler la casse (majuscule/minuscule)
-//ona toUpperCase() et toLowerCase() qui sont disponibles
+//on a toUpperCase() et toLowerCase() qui sont disponibles
 let petitBonjour = "bonjour"
 petitBonjour.toUpperCase() //renvoie "BONJOUR"
 
