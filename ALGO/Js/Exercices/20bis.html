@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 20</title>
+</head>
+
+<body>
+    Objectif: Retirer les accents d'une phrase
+    <script>
+        let phrase = prompt("entrez une phrase");
+        //autre solution
+        resultat = "";
+
+        //on prépare deux tableaux, un avec accent qui nous permettra de tester nos caractères
+        let accents = ["é", "ê", "è", "à", "ï", "ô"];
+        //et un sans accents qui nous permettra de convertir nos caractères
+        let sansAccents = ["e", "e", "e", "a", "i", "o"];
+        //les deux tableaux doivent avoir une correspondance 1 à 1 pour faciliter l'accès aux caractères
+        //on parcours notre phrase
+        for (let i = 0; i < phrase.length; i++) {
+            //on parcours notre liste de caractères accentués
+            for (let j = 0; j < accents.length; j++) {
+                //si un de ces accents correspond au caractère de notre phrase
+                if (phrase[i] == accents[j]) {
+                    //on écrit sa version sans accent dans le résultat
+                    resultat = resultat + sansAccents[j];
+                }
+            }
+            //si aucun caractère n'a été converti de sa version accentuée à non accentuée
+            if (resultat.length != i + 1) {
+                //on écrit juste le caractère comme il vient
+                resultat = resultat + phrase[i];
+            }
+        }
+        console.log(resultat);
+    </script>
+</body>
+
+</html>

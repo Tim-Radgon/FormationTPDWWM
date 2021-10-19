@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Exercice 20</title>
-    </head>
-    <body>
-        Objectif: Retirer les accents d'une phrase
-        <script>
-            let phrase = prompt("entrez une phrase");
-        </script>
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 20</title>
+</head>
+
+<body>
+    Objectif: Retirer les accents d'une phrase
+    <script>
+        let phrase = prompt("entrez une phrase")
+        //on prépare un résultat chaine vide
+        let correct = ""
+        //on parcours notre phrase de référence
+        for (let i = 0; i < phrase.length; i++) {
+            //si on tombre sur un accent
+            if (
+                phrase[i] == "é" ||
+                phrase[i] == "è" ||
+                phrase[i] == "ê" ||
+                phrase[i] == "ë"
+            ) {
+                //on ajoute a notre chaine de résultat sa version sans accent
+                correct = correct + "e"
+            } else if (
+                //on répète la même condition sur autant de familles de caractères que nécessaire
+                phrase[i] == "à" ||
+                phrase[i] == "â"
+            ) {
+                correct = correct + "a"
+            } else {
+                //les autres caractères (non accentués ou non gérés) sont ajoutés sans changement
+                correct = correct + phrase[i]
+            }
+        }
+        console.log(correct)
+    </script>
+</body>
+
 </html>
