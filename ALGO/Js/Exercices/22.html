@@ -13,7 +13,17 @@
     clé de 3, un "a" deviendrait un "d", un "b" deviendrait un "e", et un "z" un "c", ainsi de suite.
     <script>
         let phrase = prompt("Entrez la phrase à coder")
-        let cle = +prompt("Entre la clé de chiffrement")
+        let cle = +prompt("Entrez la clé de chiffrement")
+        let alphabet = "abcdefghijklmnopqrstuvwxyz"
+        let chiffre = ""
+        for (let i = 0; i < phrase.length; i++) {
+            for (let j = 0; j < alphabet.length; j++) {
+                if (phrase[i] == alphabet[j]) {
+                    chiffre += alphabet[(j + cle) % 26]
+                }
+            }
+        }
+        console.log(chiffre)
     </script>
 </body>
 
