@@ -11,6 +11,29 @@
     de la même façon dans les deux sens)
     <script>
         let phrase = prompt("entrez une phrase")
+        //on se prépare une string vide dans laquelle ranger notre phrase normalisée
+        let phraseSansEspacesOuPonctuation = ""
+        //on parcours la phrase donnée
+        for (let i = 0; i < phrase.length; i++) {
+            //pour chaqeu caratère, on vérifie s'il n'est pas un caractère "interdit"
+            if (phrase[i] != " " && phrase[i] != "," && phrase[i] != "!") {
+                //si c'est un caratère autorisé, on l'ajoute à notre nouvelle string
+                phraseSansEspacesOuPonctuation += phrase[i]
+            }
+        }
+        //il ne nous reste plus qu'à inverser notre chaine de caractères et vérifier si 
+        //la phrase à l'envers est bien égale à la phrase à l'endroit (palindrome)
+
+        //on crée une chaine vide pour accueillir notre résultat
+        let envers = ""
+        //on parcours la phrase d'origine à l'aide d'une boucle tourant "à l'envers"
+        for (let i = phraseSansEspacesOuPonctuation.length - 1; i >= 0; i--) {
+            //on ajoute chaque caractère trouvé à notre chaine de résultat
+            envers = envers + phraseSansEspacesOuPonctuation[i]
+        }
+        console.log(envers, phraseSansEspacesOuPonctuation === envers)
+
+
     </script>
 </body>
 
