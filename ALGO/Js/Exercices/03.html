@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Exercice 3</title>
 
-    </head>
-    <body>
-        Objectif : à partir de l'âge d'un joueur, renvoyer la catégorie sportive lui correspondant.
-        <script>
-            ///on demande l'âge à l'utilisateur
-            let age = +prompt("Entre l'âge du sportif")
-            //si le sportif a moins de 6 ans
-            if (age < 6) {
-                alert("Mini Poussin")
-            }
-            if (age >= 6 && age <= 7) {
-                alert("Poussin")
-            }
-            if (age == 8 || age == 9) {
-                alert("Benjamin")
-            }
-            if (age >= 10 && age <= 11) {
-                alert("Minime")
-            }
-            if (age >= 12) {
-                alert("Cadet")
-            }
-            
-            //le code précédent était correct, mais le code suivant fait le job tout aussi bien et même mieux
-            //le code est plus lisible et plus performant
-            if (age < 6) {
-                alert("Mini Poussin")
-            } else if (age < 8) {
-                //étant donné qu'on a éliminé la possibilité d'avoir - de 6 ans, on peut juste vérifier qu'il ait également - de 8 ans pour déterminer s'il est poussin
-                alert("Poussin")
-            } else if (age < 10) {
-                alert("Benjamin")
-            } else if (age < 12) {
-                alert("Minime")
-            } else {
-                //toutes les options ayant été éliminées, le seul cas restant est celui de cadet
-                alert("Cadet")
-            }
-        </script>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 3</title>
+
+</head>
+
+<body>
+    Objectif : à partir de l'âge d'un joueur, renvoyer la catégorie sportive lui correspondant.
+    <script>
+        ///on demande l'âge à l'utilisateur
+        let age = +prompt("Entre l'âge du sportif")
+        //si le sportif a moins de 6 ans
+        if (age < 6) {
+            alert("Mini Poussin")
+        }
+        if (age >= 6 && age <= 7) {
+            alert("Poussin")
+        }
+        if (age == 8 || age == 9) {
+            alert("Benjamin")
+        }
+        if (age >= 10 && age <= 11) {
+            alert("Minime")
+        }
+        if (age >= 12) {
+            alert("Cadet")
+        }
+
+        //le code précédent était correct, mais le code suivant fait le job tout aussi bien et même mieux
+        //le code est plus lisible et plus performant
+        if (age < 6) {
+            alert("Mini Poussin")
+        } else if (age < 8) {
+            //étant donné qu'on a éliminé la possibilité d'avoir - de 6 ans, on peut juste vérifier qu'il ait également - de 8 ans pour déterminer s'il est poussin
+            alert("Poussin")
+        } else if (age < 10) {
+            alert("Benjamin")
+        } else if (age < 12) {
+            alert("Minime")
+        } else {
+            //toutes les options ayant été éliminées, le seul cas restant est celui de cadet
+            alert("Cadet")
+        }
+    </script>
+</body>
+
 </html>

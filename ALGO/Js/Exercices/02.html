@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Exercice 2</title>
 
-    </head>
-    <body>
-        Objectif : Calculer un total TTC à partir d'un prox à l'unité HT, d'une quantité, et d'un taux de TVA
-        <script>
-            let prixHT = +prompt('Entrez le prix HT')
-            let quantite = +prompt('Entrez le quantité')
-            let tva = +prompt('Entrez le taux de TVA')
-            let resultat = prixHT * quantite * (1 + tva / 100)
-            alert("le prix TTC est : " + resultat)
-        </script>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 2</title>
+
+</head>
+
+<body>
+    Objectif : Calculer un total TTC à partir d'un prox à l'unité HT, d'une quantité, et d'un taux de TVA
+    <script>
+        let prixHT = +prompt('Entrez le prix HT')
+        let quantite = +prompt('Entrez le quantité')
+        let tva = +prompt('Entrez le taux de TVA')
+        let resultat = prixHT * quantite * (1 + tva / 100)
+        alert("le prix TTC est : " + resultat)
+    </script>
+</body>
+
 </html>

@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Exercice 8</title>
 
-    </head>
-    <body>
-        Objectif : Remplir un tableau avec toutes les valeurs contenues entre a et b
-        <script>
-            let a = +prompt("Entrez le premier nombre")
-            let b = +prompt("Entrez le second nombre")
-            //création d'un tableau vide
-            let nombres = []
-            //on part de a jusqu'à b, et on avance de 1 en 1
-            for (let i = a + 1; i < b; i = i + 1) {
-                //on ajoute notre nouveau nombre dans notre tableau
-                nombres.push(i)
-            }
-            //on affiche notre tableau
-            console.log(nombres)
-        </script>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 8</title>
+
+</head>
+
+<body>
+    Objectif : Remplir un tableau avec toutes les valeurs contenues entre a et b
+    <script>
+        let a = +prompt("Entrez le premier nombre")
+        let b = +prompt("Entrez le second nombre")
+        //création d'un tableau vide
+        let nombres = []
+        //on part de a jusqu'à b, et on avance de 1 en 1
+        for (let i = a + 1; i < b; i = i + 1) {
+            //on ajoute notre nouveau nombre dans notre tableau
+            nombres.push(i)
+        }
+        //on affiche notre tableau
+        console.log(nombres)
+    </script>
+</body>
+
 </html>
