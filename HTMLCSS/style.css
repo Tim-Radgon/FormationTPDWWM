@@ -1,0 +1,61 @@
+/* 
+En CSS, on peut définir l'apparence de nos éléments grâce à des règles
+Ces règles ciblent un ou plusieurs éléments puis définissent des propriétés pour des éléments
+ */
+
+h1 {
+    /* Ici, on cible les éléments en h1 de notre page */
+    color:rgb(192, 11, 11);
+    /* et on leur attribue une nouvelle couleur de texte */
+    font-size: 2em;
+    /* on peut également leur donner une nouvelle taille de texte */
+    /* 1em équivaut à 1 hauteur de caractère, 3em signifie donc 3 fois plus grand qu'un caractère */
+}
+
+h1 span {
+    color:rgb(38, 38, 170);
+}
+
+h2, h3 {
+    /* on peut cibler plusieurs éléments en les séparant par des virgules */
+    color:green;
+    font-size: 1em;
+}
+
+.blue-color {
+    /* on peut choisir de cibler non pas un type d'élément (h1, div, main ...) mais une classe CSS */
+    /* tous les éléments possédant cette classe (au travers de l'attribut class="nomDeClasse" dans le html) seront donc concernés par cette règle */
+    color:rgb(98, 64, 223);
+}
+
+nav ul {
+    /* pour pouvoir styliser notre liste, on doit se débarasser de certaines propriétés par défaut */
+    list-style-type: none;
+    /* par exemple, si on désire enlever le style des puces de nos éléments de liste */
+    padding: 0;
+    /* ou si l'on souhaite supprimer les marges intérieures */
+    display: flex;
+    /* ou si l'on veut afficher les éléments en ligne au lieu de colonne (flex est tout un système d'orientation et organisation des blocs que nous verrons plus tard) */
+}
+
+nav li {
+    /* les éléments de liste eux même peuvent également être stylisés */
+    margin: 1em;
+    /* ici on leur demande par exemple d'être un peu plus en marge par rapport au contenu en spécifiant une marge extérieure */
+}
+
+nav a {
+    /* pour rendre nos liens plus visibles on peut également les cibler */
+    background-color: rgb(168, 175, 243);
+    /* changer la couleur de fond */
+    padding: 0.3em;
+    /* changer leurs marges intérieures */
+    border-radius: 5px;
+    /* et également arrondir les angles autour de nos liens */
+}
+
+nav a:hover {
+    /* on peut également spécifier quel style adopter lors de certaines situations avec des pseudos classes, comme par exemple ici spécifier des règles qui ne seront actives que si l'on survole l'élément avec la souris */
+    background-color: rgb(157, 177, 157);
+    border: 1px solid black;
+}

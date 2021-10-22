@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 96px;
+    align-items: center;
+    
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    
+}
+
+nav ul li a {
+    margin: 0 15px;
+    color: #737373;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #333333;
+}
+
+.logo {
+    font-weight: bolder;
+    color: #0061f2;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.button-buy {
+    margin-left: 60px;
+    font-weight: 700;
+    background-color: blue;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 0.35rem;
+}
+
+.button-buy:hover {
+    color: white;
+    background-color: #0052ce;
+
+}

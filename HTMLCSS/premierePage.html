@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<!-- le document HTML se trouve toujours entre les deux balises <html> -->
+
+<head>
+    <!-- 
+        head est l'en-tête du document HTML
+        Il contine des informations sur le document qui ne vont pas forcément être affichées à l'écran , mais participent au rendu du document dans le navigateur
+     -->
+    <title>Ma Première Page Web</title>
+    <!-- le titre du document permet au navigateur d'indiquer quel document est consulté dans la barre d'onglets, les moteurs de recherche l'utilisent pour représenter le contenu dans leurs résultats de recherches -->
+    <meta charset="utf-8" />
+    <!-- les balises meta décrivent une propriété du document lui même, la balise meta d'attribut charset permet de définir le jeu de caractères utilisé pour le rendu du texte, ici on précise utf-8, un jeu de caractères universel -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- une balise link permet de lier un document externe (souvent du css) à notre document html, cela indique au navigateur que le docuement html a besoin de ce document externe pour être rende correctement -->
+    <!-- l'attribut rel permet de définir la relation entre notre document html, et le document lié ici, la relation est "stylsheet" pour "geuille de style", et indique ainsi que le document lié a pour rôle la mise en forme de notre document -->
+    <!-- l'attribut type lui permet de définir le type du document, ici une feuille css -->
+    <!-- enfin, href permet de donner le lien de la ressource pour téléchargement, ici c'est notre fichier style.css -->
+
+</head>
+
+<body>
+    <!-- body est le corps de notre page, le contenu de notre document. Tout ce qu'on désite afficher à l'écran devra être placé dans body -->
+    <header>
+        <!-- header permet de définir la section "en-tête" du contenu à afficher, il peut être l'en-tête de toute la page ou d'une section de la page -->
+        <h1><span>Ma</span> Première Page Web !</h1>
+        <!-- les balises h (pour hedding) permettent de définir des titres hiérarchisés de 1 à 6, 1 étant le titre principal. Il ne doit exister qu'un seul h1 par page -->
+        <h2>C'est la première fois que je fais ça, soyez gentils</h2>
+        <!-- en dessous (en hiérarchie) de h1 il n'y a aucune limitation sur le nombre d'utilisations des balises h -->
+    </header>
+
+    <nav>
+        <!-- les éléments de navigation (liens vers autre contenu, autres catégories), peuvent être insérés ici pour être retrouvés plus facilement -->
+        <!-- plusieurs nav peuvent exister sur une même page, par exemple un nav contenant la navigation principale, et potentiellement un nav perrmettant de revenir en arrière, changer une catégorie, lister du contenu supplémentaire, etc ... -->
+        <ul>
+            <!-- si je veux lister des informations, je peux utiliser ul (unordered list) pour lister du contenu sans hiérarchie particulière -->
+            <li>
+                <!-- li est un élément d'une liste -->
+                <a href="#"> Accueil</a>
+                <!-- a, pour anchor, permet de définir un lien vers une ressource soit interne au document soit externe (une autre page, un autre site, etc...) -->
+                <!-- sans la présence de l'attribut href, le a n'est pas valide -->
+            </li>
+            <li>
+                <!-- chaque nouveau li est un nouveau "point" de notre liste -->
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- main permet de définir l'emplacement du contenu principal dans le document, cette balise doit de préférence être unique dans la page -->
+        <article>
+            <!-- article définit une portion de la page prévue pour une partie de contenu concernant un thème précis et pouvant être indépendant du reste de la page -->
+            <h2>Mes Loisirs</h2>
+            <section>
+                <!-- une section définit une partie de contenu thématique et commence généralement par un titre -->
+                <h3 class="blue-color">Loisir 1</h3>
+                <!-- on peut donner un attribue class à n'importe quel élément, ce qui permettra de le sélectionner plus facilement en CSS -->
+                <img src="https://via.placeholder.com/150" alt="Image de mon loisir 1">
+                <!-- les balises img permettent de définir du contenu pictural, l'attribut src permet d'indiquer la source de l'image, l'attribut alt une description de cette image, servant également au cas ou l'image ne chargerait pas / l'utilisateur ne pouvant pas voir d'images -->
+                <!-- l'attribut alt est INDISPENSABLE -->
+                <p>
+                    <!-- la balise p permet de définir un paragraphe -->
+                    <!-- p est une balise textuelle, c'est à dire qu'elle ne définit pas un bloc dans le document mais plutôt une caractéristique d'une partie du texte -->
+                    Lorem ipsum <em>dolor sit</em> amet consectetur adipisicing elit. Quo consectetur hic voluptate
+                    ducimus aliquam fugiat quidem eveniet voluptatibus, <strong>nam cumque a molestias</strong> porro
+                    incidunt sapiente sint illo quos cum ipsa.
+                    <!-- dans les balises textuelles on retrouve également des balises comme em, strong et span, qui permettent de séparer des mots ou groupes de mots pour leur donner une importance particulière -->
+                    <!-- par exemple, em marque l'emphase sur une partie de texte -->
+                    <!-- strong lui marque une plus grande importantce, une tonalité particulière (plus grave, sérieux etc...) -->
+                </p>
+                <a href="loisir1.html">En savoir plus</a>
+            </section>
+            <section>
+                <h3 class="blue-color">Loisir 2</h3>
+
+                <img src="https://via.placeholder.com/150" alt="Image de mon loisir 2">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quibusdam assumenda sapiente
+                    alias suscipit ipsam, officiis perspiciatis mollitia. Ut, exercitationem. Facere nisi non quas
+                    perspiciatis, aspernatur at autem libero commodi?
+                </p>
+                <a href="loisir2.html">En savoir plus</a>
+            </section>
+            <section>
+                <h3>Loisir 3</h3>
+                <img src="https://via.placeholder.com/150" alt="Image de mon loisir 3">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat distinctio quam quidem dolor quo,
+                    perspiciatis quisquam quod laboriosam. Ex deserunt eaque similique culpa, tenetur debitis? Dicta
+                    temporibus ab eum illo.
+                </p>
+                <a href="loisir3.html">En savoir plus</a>
+            </section>
+        </article>
+
+    </main>
+    <footer>
+        <!-- footer est comme header, il définit un pied de page ou fin de section comme header définit un en-tête ou début de section -->
+        <address>
+            <!-- il existe aussi des balises très spécifiques comme address qui permet de représenter des coordonnées -->
+            Me contacter :
+            <a href="mailto:contact@monblog.fr">
+                <!-- on peut effectuer un lien vers une adresse mail ou vers certains moyens de communication en précisant un préfixe dans notre href, ici mailto: permet de définir qu'il s'agit d'une adresse mail -->
+                Par mail au contact@monblog.fr
+            </a>
+            Par voie postale : 300 rue du 18 mai 1844 espigoule 18400
+        </address>
+    </footer>
+</body>
+
+</html>
