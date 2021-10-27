@@ -1,0 +1,79 @@
+body {
+    font-family: 'Chivo', sans-serif;
+    background-color: green;
+}
+
+.text-regular {
+    font-weight: 400;
+}
+
+.text-light {
+    font-weight: 300;
+}
+.card {
+    margin: auto;
+    height: 400px;
+    width: 650px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+}
+
+.card-picture {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.card-nag{
+    margin-left: 20px;
+
+}
+h1 {
+    margin-bottom: -25px;
+}
+
+.date {
+    display: flex;
+    margin-top: -15px;
+}
+
+h3 {
+    margin-right: 20px;
+
+}
+
+h4 {
+    font-size: large;
+    margin-top: 19.5px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-social-number {
+    text-align: center;
+    font-size: 25px;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: -25px;
+}
+
+h6 {
+    margin-bottom: -25px;
+}
+
+.card-description {
+    margin: 0 20px 0 20px;
+}
