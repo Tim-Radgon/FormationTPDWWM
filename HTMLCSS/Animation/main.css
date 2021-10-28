@@ -1,0 +1,90 @@
+.block{
+    height: 150px;
+    width: 150px;
+    background-color: brown;
+    color: white;
+    margin: 50px 0;
+    font-size: 5em;
+}
+/* on peut indiquer le besoin d'une transition douce durant un changement de propriété CSS à l'aide de transition */
+/* transition permet d'indiquer un temps de transition et une propriété ciblée pour permettre l'interpolation entre l'état de départ et l'état d'arrivée */
+.block1 {
+    transition: background-color 0.3s, color 0.3s;
+    /* ici on indique vouloir que le changement de couleur de fond se fasse en 0. 2s de façon fluide, et la couleur de texte en 0.3s */
+}
+.block1:hover {
+    background-color: white;
+    color: brown;
+    /* lorsque ces propriétés sont changées ponctuellement lors du survol, la transition ne sera donc pas brute mais graduelle sur le timing indiqué */
+}
+
+/* Ces transitions peuvent intervenir sur n'importe quelle propriété qui implique un changement visuel à l'écran */
+.block2 {
+    transition: transform 0.3s;
+    /* par exemple ici la propriété transform */
+}
+.block2:hover {
+    transform: rotate(45deg) translate(50px, 10px);
+    /* transform permet d'indiquer des fonctions de transformation dans l'espace sur un élément, comme ici une rotation horaire de 45 degrés ou une translation de 50px sur l'axe x et de 10px sur l'axe y (50px sur la droite, 10px vers le bas */
+    /* avec une transition aplliquée, ces transformations seront du coup graduelle */
+}
+
+/* pour spéccifier des comportements qui sont répétables et utilisable à volonté, pouvant être plus complexes qu'une simple transition entre deux états, on peut utiliser également les animations */
+/* utiliser une animation permet de manipuler plusieurs propriétés selon des frames d'animation dont on peut préciser le timing */
+/* cela permet d'ajouter des "étapes" dans notre transition et même créer des animations complexes */
+.block3 {
+    /* pour pouvoir utiliser une animation il faut cependant avoir une animation déclarée, ici elle s'appelle rotation et est précisée en dessous
+    on déclare également la durée, la répétition et le timing d'éxécution de l'animation */
+    animation: rotation 1s infinite linear;
+    /* ici l'animation "rotation" durera 1s, se répétera à l'infini et s'exécutera de façon linéaire (pas de ralentissement ou accelération des frames) */
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.block4 {
+    margin-left: 200px;
+    animation: rebound 0.5s infinite alternate cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes rebound {
+    0%{
+        transform: translateY(0);
+    }
+    33%{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+}
+
+.block5 {
+    transition: all 1s;
+}
+.block5:hover {
+    transform: perspective(500px) rotate3d(1, 1, 1, 90deg);
+}
+
+.card {
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 500px;
+    margin-bottom: 100px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
