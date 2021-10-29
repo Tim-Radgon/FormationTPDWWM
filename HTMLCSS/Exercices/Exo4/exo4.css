@@ -1,0 +1,109 @@
+/*** The new CSS Reset - version 1.3.1 (last updated 28.10.2021) ***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+body {
+    font-family: 'Chivo', sans-serif;
+}
+
+.linear-gradient {
+    background: linear-gradient(180deg, blue, pink);
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    padding: 10px 0 10px 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block {
+    border-radius: 0.5em;
+    margin-bottom: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 300px;
+    height: 548px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.block:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.head, .head1, .head2 {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    color: white;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.head {
+    background-color: rgb(6, 6, 153);
+}
+.head1 {
+    background-color: rgb(201, 149, 53);
+}
+.head2 {
+    background-color: rgb(252, 134, 154);
+}
+span {
+    font-size: 25px;
+}
+  
+.choice {
+    font-size: 20px;
+    margin-bottom: 1px;
+}
+
+.price {
+    font-size: 50px;
+}
+  

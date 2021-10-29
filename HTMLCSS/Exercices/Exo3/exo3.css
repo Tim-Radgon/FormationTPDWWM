@@ -4,10 +4,16 @@ body {
 
 .contenu {
     display: flex;
+    margin: 0 auto;
+}
+
+.color1, .color2, .color3 {
     height: 500px;
+    min-width: 300px;
 }
 
 .color1 {
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,7 +49,6 @@ a {
 }
 
 .button1 {
-    margin: 0;
     padding: 10px;
     border-radius: 30% / 80%;
     background-color: white;
@@ -53,7 +58,7 @@ a {
 
 .button2 {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 30% / 80%;
     background-color: white;
     color: rgb(99, 99, 241);
     text-decoration: none;
@@ -61,16 +66,15 @@ a {
 
 .button3 {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 30% / 80%;
     background-color: white;
     color: rgb(94, 214, 94);
     text-decoration: none;
 }
 
-@media screen and (min-width: 468px) {
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap;
+@media screen and (max-width: 1000px) {
+    .contenu {
+        flex-direction: column;
         justify-content: center;
 } 
 }
