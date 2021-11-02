@@ -63,6 +63,8 @@ h1 {
     background-color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 300px;
@@ -83,10 +85,15 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .head {
     background-color: rgb(6, 6, 153);
+}
+
+.card {
+    width: 100%;
 }
 .head1 {
     background-color: rgb(201, 149, 53);
@@ -109,7 +116,7 @@ span {
 
 p {
     border-bottom: 0.10rem solid;
-    border-color: rgb(121, 120, 120);
+    border-color: rgba(121, 120, 120, 0.568);
     padding: 15px;
     color: rgba(73, 71, 71, 0.925);
     font-size: 1.2em; 
@@ -122,6 +129,8 @@ p {
     padding: 0.5em;
     width: 70%;
     border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 .button2 {
     background-color: rgb(201, 149, 53);
@@ -130,6 +139,12 @@ p {
     background-color: rgb(252, 134, 154);
 }
 
+.featpro {
+    color: rgb(201, 149, 53);
+}
+.featpremium {
+    color: rgb(252, 134, 154);
+}
 @media screen and (min-width: 468px){
     .container {
         flex-direction: row;
@@ -137,6 +152,10 @@ p {
     }
     h1 {
         padding: 1.5em;
+    }
+    .block2 {
+        margin-top: 20px;
+        z-index: 1;
     }
 }
 
