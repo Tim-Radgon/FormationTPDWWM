@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SEO - Search Engine Optimization</title>
+    <!-- Le titre <title> est un éléments majeurs aidant au référencement de votre site via des mots clés
+    Ici les mots clés contenus dans ce titre seraient "SEO", "Search", "Engine" et "Optimization"
+    Chaque titre de page dans un site doit être unique et faire au maximum 150 caractères
+    Le titre de la page doit représenter fidèlement son contenu -->
+    <!-- Un exemple de titre pour une page pourrait être "Notre Houblon - Kronenbourg", "Notre houblon" étant le thème de la page, "Kronenbourg" étant le site global dans laquelle la page s'inscrit -->
+    <meta name="description" content="Astuces pour appréhender les SEO en améliorant le contenu de notre site" />
+    <!-- La balise <meta> "description" est utilisée lors du référencement car elle indique à l'utilisateur ce que contient notre page plus en détail que ce que le fait le titre
+    Elle doit idéalement faire un maximum de 150 caractères et chaque description doit, à l'instar du titre, être unique et ne concerner que le contenu de notre page
+    C'est également le contenu de cette description qui sera affiché sur les résultats d'un moteur de recherche
+    Il ne faut pas non pllus que la description soit trop courte et on peut s'imposer un minimum de 60 caractères -->
+    <meta name="author" content="Elon Meusque" />
+    <meta name="copyright" content="TaisseLà" />
+    <!-- Les balises <meta> "author" et "copyright" ont une utilité très limitée mais peuvent entrer en compte dans certaines circonstances rares, qui sont elles inconnues
+    Il est supposé que ces balises aident au référencement lorsque le contenu est intimement lié à son auteur (biographies, blogs personnels, blogs d'entreprise, etc...)-->
+
+    <!-- à l'heure actuelle, la propriété meta keywords n'est PLUS utilisée pour le référencement suite à de nombreux abis de la part des sites qui balaçaient tous les mots clés de la création à l'intérieur dans l'espoir de gratter de précieuses places
+    Les mots clés à l'origine ne devaient concerner que le contenu de la page présente, et sont désormais remplacés par les mots clés trouvés dans la balise <meta> "description" ainsi que le balise <title> mais également le contenu de la page lui même -->
+    <meta name="keywords" content="SEO, Search, Engine, Optimization, Référencement, Astuces" />
+    <!-- Une <meta> keywords ressemble cependant à ça, même si elle ne sert plus à rien -->
+
+    <!-- La balise <meta> "robots" permet de donner des instructions aux robots d'indexation, l'indexation se fait par défaut comme la balise suivante l'indique, c'est à dire que par défaut, toutes les pages atteignables sur le web sont indexées par les moteurs de recherches -->
+    <meta name="robots" content="index, follow" />
+    <!-- la balise précédente est équivalent à : -->
+    <meta name="robots" content="all" />
+    <!-- index signifie au robot d'indexer la page (la référencer), follow l'autorise à suivre les liens, on veut la majorité du temps que toutes nos pages soient indéxées -->
+
+    <!-- cependant, certaines pages ne doivent pas être indéxées, que ce soit des pages "en construction", des pages dédiées à des erreurs, des contenus très spécifiques, des pages faisant partie d'un formulaire, des pages de réponse à des actions, etc -->
+    <!-- en gros, tout ce qui n'est pas du contenu intéressant pour un utilisateur en "Lecture principale" ne doit pas être indéxé -->
+    <!-- pour empêcher l'indexation d'une page en particulier, on peut utiliser cette balise <meta>"robots" pour l'indiquer -->
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <!-- qui est équivelent à : -->
+    <meta name="robots" content="none" />
+    <!-- noindex veut dire "pas d'indexation", nofollow "ne pas suivre les liens", noarchive "ne pas archiver la page" -->
+
+    <!-- pour empêcher l'affichage d'un extrait de notre page lors d'une recherche, on peut utiliser "nosnippet" dans notre balise robots, cependant il est possible que le référencement soit freiné par son utilisation
+    Chez google, les robots peuvent également réagir à "noimageindex" qui permet à un page de ne pas être utilisée comme référence dans google images -->
+</head>
+
+<body>
+    <!-- le plus important (et de loin) pour aider au référencement d'une page est que son contenu soit engageant, intéressant et unique
+    "unique" dans le sens où votre contenu de page ne doit pas être multiplié sur votre site (une page par article, une page par produit, etc)
+    "intéressant" dans le sens où le contenu de la page correspond fidèlement à son titre, sa description, son url, et surtout l'attente globale des utlisateurs (plus difficile à mesurer)
+    "engageant" dans le sens où un utilisateur une fois sur notre site désirera y rester et naviguer de page en page, et lire son contenu -->
+
+    <!-- il faut donc essayer de faire coller le contenu de la page à un set de mots clés, ce qui correspond environ à utiliser 3 ou 4 fois le même set de mots clés dans votre page, titre et description, mais cela doit se faire de façon organique et non forcé, se contenter de répéter plusieurs fois les mêmes mots clés ne suffira pas -->
+    <!-- chaque page doit correspondre à un thème, chaque section de contenu doit suivre ce même thème, et si les thèmes sont bien cloisonnées dans différentes parties de notre site, alors le référencement sera meilleur -->
+
+    <main>
+        <!-- pour une organisation propre et sémantique de notre contenu, on peut par exemple englober notre contenu principal dans une balise sémantique <main> -->
+        <h1>Les Astuces du SEO, Référencement Naturel, et Quelques Phrases Approximatives</h1>
+        <!-- utiliser un h1 comme titre principal, contenant nos mots clés principaux permet d'entamer le référencement du contenu
+        h1 est UNIQUE dans la page -->
+
+        <article>
+            <!-- dans le cas ou votre contenu est unique, sans sous section, peu structuré, on doit tout de même fournir un contenu qui contiendra les mots clés, ou partie des mots clés, présents dans le reste de la page (le titre, la description, notre h1, etc) -->
+            Du coup mon article va contenir des informations sur le <em>SEO</em>, et même si on va tenter d'éviter trop
+            de phrases approximatives, il faut bien en faire quelques unes pour étoffer notre explication sur le
+            référencement naturel.
+            <!-- on peut mettre une emphase sur certains termes importants, qui se peuvent être des mots clés (qui le sont même souvent) -->
+        </article>
+
+        <article>
+            <!-- si le contenu est structuré et complexe, on peut séparer les différentes sections à l'aide de balises et introduire ces sections à l'aide de h2 h3, etc chaque heading contenant le titre de la section/sous section -->
+            <h2>Le SEO C'est complexe</h2>
+            <section>
+                Le SEO c'est vraiment incroyable, y'a plein de trucs, c'est super complexe, on se régale.
+                <!-- on retrouve tout ou partie des mots clés introduits dans le titre dans notre contenu, le contenu peut être construit à partir du titre, mais il doit toujours être "organique" et n'être la que pour transmettre une information, le contenu est du contenu avant d'être un moyen de référencer une page -->
+            </section>
+            <h2>Parlons du référencement naturel</h2>
+            <section>Le référencement truc de ouf !
+                <!-- on peut/doit également utiliser des liens intérieurs, aidant à la navigation et donc au référencement
+                Ces lines intérieurs sont des liens vers d'autres pages de notre site, et en les plaçant sur des mots clés ou dans des blocs de navigation on permet une meilleure expérience utilisateur mais également un meilleur référencement -->
+                <!-- pour placer des liens il suffit d'intégrer nos ancres (<a>) au contenu de façon naturelle, et donc de les placer sur des mots clés représentant le contenu de la page ciblée -->
+                <a href="page3.html">Cliquez ici</a> pour connaître l'histoire de Google.
+                <!-- A NE PAS FAIRE, EXEMPLE DE CHOSE A NE PAS FAIRE, C'EST NUL A VOMIR -->
+                <!-- l'ancre au dessus est NULLE, ne pas faire ça -->
+                <!-- pourquoi c'est nul ? parce que la page ciblée dans le href est "anonyme", on ne peut pas deviner au travers de l'URI ce que la page va contenir, donc "pas bien" -->
+                <!-- le lien lui même est placé sur des mots n'ayant aucun lien avec la page elle même, Cliquez Ici est agnostique, donc "pas bien" -->
+
+                Si vous êtes curieux, vous pouvez suivre le lien suivant pour en apprendre plus sur
+                <a href="histoire_google.html">l'Histoire de Google</a>
+                <!-- Exemle de lien satisfaisant -->
+            </section>
+            <section>
+                <h2>beaucoup de phrases approximatives, peu de connaissances brutes</h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus explicabo voluptates dicta iusto
+                repudiandae cum expedita quae ab, qui, nesciunt eum accusamus voluptatem non, doloremque hic. Error
+                porro asperiores id.
+
+                <!-- pour les images, il faut utiliser une description précise dans l'attribut alt et cela est INDISPENSABLE -->
+                <!-- cet attribut alt s'il est manquant ou vide, vous fait perdre des points au référencement -->
+                <!-- cependant, s'il est rempli et pertinent il peut vous en faire gagner -->
+                <!-- alt est utile pour le référencement parce qu'il est utile pour l'accessibilité et l'expérience utilisateur globale -->
+                <img src="image.png" alt="">
+                <!-- A VOMIR NUL HORRIBLE pire que patrick balkany -->
+                <img src="oiseauMoche.png" alt="image">
+                <img src="oiseauMoche.png">
+                <!-- Nul Ach -->
+
+                <img src="oiseauMoche.png" alt="Un oiseau, se distinguant par sa mocheté, posé sur sa branche" />
+                <!-- INCROYABLE -->
+
+                <figure>
+                    <!-- si on souhaite utiliser une légende pour notre image on peut (on devrait) utiliser figure et figcaption  -->
+                    <img src="oiseauMocheALinterieur"
+                        alt="Un oiseau, se distinguant par la mocheté de son âme, posé sur une branche" />
+                    <figcaption>
+                        L'oiseau est moche l'intérieur, car il soutient les balkany et déteste le SEO.
+                    </figcaption>
+                </figure>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
