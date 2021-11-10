@@ -12,15 +12,15 @@ Si aucune destination n'est définie, c'est la page du formulaire qui doit se ch
 <!--l'attribut method de form sert à préciser la méthode (GET ou POST), POST étant la méthode pour envoyer des données
 l'attribut "action" est là pour indiquer la localisation de la page de traitement-->
 <form method="POST" action="result.php">
-    <!--lorsque l'on définit un champ de formulaire il est de        bon aloi d'utiliser un label-->
+    <!--lorsque l'on définit un champ de formulaire il est de bon aloi d'utiliser un label-->
     <label for="nicknameInput">
         Pseudo
     </label>
-    <!--notre champ input est ainsi lié au label qui le              décrit à l'écran et pour les robots-->
+    <!--notre champ input est ainsi lié au label qui le décrit à l'écran et pour les robots-->
     <input id="nicknameInput" name="nickname" type="text"/>
 
-    <!--Pour associer un label avec un champ de formulaire, on           peut préciser l'id du champ de formulaire associé dans           l'attribut "for" du label
-    cela permet une meilleure expérience utilisateur et une              meilleure accessibilité-->
+    <!--Pour associer un label avec un champ de formulaire, on peut préciser l'id du champ de formulaire associé dans l'attribut "for" du label
+    cela permet une meilleure expérience utilisateur et une meilleure accessibilité-->
     <label for="countrySelect">Pays</label>
     <select name="country" id="countrySelect">
         <option value="FR">France</option>
@@ -28,7 +28,11 @@ l'attribut "action" est là pour indiquer la localisation de la page de traiteme
         <option value="DE">Allemagne</option>
     </select>
 
-
+    <label for="termsCheckbox">
+        Acceptez vous le contrat d'utilisation ?
+    </label>
+    <input type="checkbox" name="agreeTerms" id="termsCheckbox">
+    
     <!--pour permettre l'envoi du formulaire il nous faut un submit, qui peut être fait avec input type submit-->
     <input type="submit">
 </form>
