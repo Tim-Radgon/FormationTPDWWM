@@ -58,11 +58,12 @@ h1 {
 }
 
 .link {
-    height: 90%;
-    width: 90%;
-
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.295);
 }
-
 
 a {
     display: flex;
@@ -93,3 +94,43 @@ a:active {
     height: 1.2em;
     width: 1.2em;
 }
+
+.name {
+    font-size: 0.9em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.price {
+    font-size: 1em;
+    margin: 0.5em 0 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroller {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+span {
+    display: flex;
+    border-radius: 5px;
+    font-size: 1.1em;
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+    color: white;
+    height: 20px;
+    width: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+span:hover {
+    background-color: rgb(255, 71, 71);
+}
+
+
+
+
+
+    
