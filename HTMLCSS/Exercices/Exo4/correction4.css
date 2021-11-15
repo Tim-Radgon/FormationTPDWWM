@@ -1,0 +1,159 @@
+/* :root est un pseudo élément ciblant nécessairement la racine du document. Pour une page HTMl classique, il s'agit de <html> */
+:root {
+    /* Il est possible de définir des "propriétés personnalisées" en CSS qui agissent quasiment comme des variables
+    On peut les définir dans un élément et les utiliser dans tous les enfants de cet élément à l'aide de var() 
+    Ces propriétés ont un nom précédé de -- à chaque fois, ce qui les différencie des propriétés classiques*/
+    --tier1-color: #2f3e75;
+    --tier2-color: #ffb489;
+    --tier3-color: #eb7878;
+}
+
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* On peut définir un fond en couleurs dégradées à l'aide de la fonction css linear-gradient qui peut prendre différentes couleurs et les disposer en interpolant entre chaque pour créer un effet de dégradé*/
+    /* On peut orienter le dégradé en spécifiant une orientation sous la forme d'un angle en degrés */
+    background: linear-gradient(
+        180deg,
+        rgba(51, 128, 177, 1) 0%,
+        rgba(233, 170, 179, 1) 100%
+    );
+    /* en spécifiant background-attachement fixed on indique la volonté d'attacher le fond dégradé non pas à notre élément <body> mais au "viewport" qui est la vue entière dans laquelle notre page s'affiche */
+    background-attachment: fixed;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 4em;
+    color: white;
+    font-weight: 400;
+}
+
+h2,
+h3 {
+    margin: 0;
+}
+.tier {
+    height: 400px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 0.5em 0;
+    background-color: white;
+}
+.tier > div {
+    /* étant donné notre volonté de grouper les deux premiers éléments de notre élément .tier dans une même div, il nous faut ensuite cibler cette même div et lui donner une taille de 100% pour qu'elle épouse les forme de son parent (.tier) */
+    width: 100%;
+}
+
+.tier2 {
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.3);
+}
+
+.tier-head {
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+}
+.tier1 .tier-head {
+    /* Pour pouvoir référencer une propriété personnalisée comme on le ferait avec une variable en programmation on utilise la fonction var() qui prend un nom de propriété (commençant toujours par --) et renvoie sa valeur  */
+    background-color: var(--tier1-color);
+}
+.tier2 .tier-head {
+    background-color: var(--tier2-color);
+}
+.tier3 .tier-head {
+    background-color: var(--tier3-color);
+}
+.tier-name {
+    font-weight: 400;
+}
+.tier-price {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+    font-weight: 400;
+}
+
+.tier-body {
+    width: 100%;
+}
+
+.tier-features {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* les selecteurs css peuvent être agrémentés de pseudo classes qui permettent d'affiner notre selection
+ces pseudos classes peuvent définir un état (:hover, :active, :focus, etc) mais peuvent aussi définir une "nature", ici par exemple on désire trouver le dernier ".feature-name" se trouvant dans ".tier2", pour ça on utilise la pseudo classe :last-child
+Elle possède un opposé :first-child qui permet de selectionner le premier enfant */
+.tier2 .feature-name:last-child {
+    color: var(--tier2-color);
+}
+.tier3 .feature-name:last-child {
+    color: var(--tier3-color);
+}
+
+.feature-name {
+    text-align: center;
+    width: 100%;
+    padding: 0.5em 0;
+    border-bottom: 1px solid grey;
+}
+
+.tier1 .button-select {
+    background-color: var(--tier1-color);
+}
+.tier2 .button-select {
+    background-color: var(--tier2-color);
+}
+.tier3 .button-select {
+    background-color: var(--tier3-color);
+}
+
+.tier-foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+}
+
+.button-select {
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* on utilise une media query pour déterminer notre CSS dans le cas où on serait affiché sur un écran d'ordinateur (ou du moins un écran assez large) */
+/* Pour choisir notre point d'arrêt on s'est contenté de calculer la taille minimale nécessaire pour afficher nos 3 éléments principaux à l'écran, chacun faisant 280px de largeur, on a pris 280px*3 */
+@media screen and (min-width: 840px) {
+    .container {
+        /* notre layout passera en ligne si c'est le cas */
+        flex-direction: row;
+    }
+
+    .tier2 {
+        height: 390px;
+        /* pour réaliser notre effet de superposition et d'agrandissement du tier 2, on peut utiliser une propriété css transform pour agrandir (scale, mise à l'echelle) et décaler (translateY, translation verticale) notre élément
+        transform n'affectant pas le reste du layout il agit sans troubler les autres éléments*/
+        transform: scale(1.05) translateY(15px);
+    }
+}

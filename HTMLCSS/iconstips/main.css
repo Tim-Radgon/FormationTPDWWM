@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.wine-button {
+    width: 4em;
+    height: 4em;
+    border: 4px solid black;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+i {
+    transition: all 0.2s;
+}
+
+.wine-button:hover i {
+    color: red;
+}
+
+.wine-button:hover {
+    border-color: red;
+}
+
+.wine-button:active {
+    border-color: blue;
+}
+
+.wine-button:active i {
+    color: blue;
+}
+/* 
+permet de gérer l'apparence d'un élément qui est focused au clavier ou a la souris (selection par tab, click)
+nécessite un élément "focusable" type bouton, champ de formulaire 
+.wine-button:focus {
+    border-color: green;
+}
+.wine-button:focus i {
+    color: green;
+} */
+
+.wine-button i {
+    font-size: 4em;
+}
+
+/* pour changer le style d'un lien déjà visité on utilise la pseudo classe visited */
+a:visited {
+    color: green;
+}
+
+.block {
+    height: 200px;
+    border: 1px solid black;
+}
+
+#block5 {
+    border-color: maroon;
+}

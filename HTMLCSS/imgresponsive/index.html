@@ -1,0 +1,8 @@
+Utiliser les attributs srcset et sizes
+
+L'attribut src est ignoré lorsque l'agent utilisateur prend en charge srcset et que ce dernier contient des descripteurs
+avec 'w'. Dans cet exemple, lorsque la condition (min-width: 600px) est vérifiée pour le média utilisé, la largeur de
+l'image sera 200px, sinon, elle occupera 50vw (ce qui correspond à 50% de la largeur de la zone d'affichage (viewport)).
+
+<img src="clock-demo-200px.png" alt="Clock" srcset="clock-demo-200px.png 200w,
+          clock-demo-400px.png 400w" sizes="(min-width: 600px) 200px, 50vw">

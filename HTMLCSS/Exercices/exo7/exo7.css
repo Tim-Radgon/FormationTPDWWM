@@ -1,0 +1,67 @@
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+ol, ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+table {
+    border-collapse: collapse;
+}
+textarea {
+    white-space: revert;
+}
+
+body {
+    font-family: 'Chivo', sans-serif;
+}
+
+article {
+    background-color: rgb(19, 19, 87);
+    border: 3px solid rgb(52, 52, 255);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: rgb(59, 59, 143);
+    height: 150px;
+    width: 290px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.pic {
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid whitesmoke;
+}
+
+h1 {
+    font-size: 25px;
+    color: white;
+}
+
+.text {
+    background-color: rgb(28, 28, 104);
+    height: 40px;
+    width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    
+}
