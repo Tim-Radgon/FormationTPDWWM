@@ -16,7 +16,7 @@ $dice = $_POST["dice"];
 //}
 
 //on sépare la chaine de l'utilisateur en utilisant les + comme séparateur
-$diceList = (explode("+", mb_strtoupper($dice)); //strtoupper nous sert à "normaliser" la chaine de caractères pour ne pas avoir à gérer la casse sur les "D" de notre chaîne
+$diceList = (explode("+", mb_strtoupper($dice))); //strtoupper nous sert à "normaliser" la chaine de caractères pour ne pas avoir à gérer la casse sur les "D" de notre chaîne
 
 //on se prépare à compter
 $total = 0;
@@ -32,7 +32,7 @@ foreach ($diceList as $die) {
         }
     } else {
         //sinon on ajoute juste notre valeur bonus au total
-        $total += $dieValues[0];
+        $total += intval($dieValues[0]);
     }
 }
 echo $total;
