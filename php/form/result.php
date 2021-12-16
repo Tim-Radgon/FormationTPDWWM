@@ -26,7 +26,7 @@ if (!isset($_POST["agreeTerms"])) {
         $countryCode = $_POST["country"];
         //on prépare un tableau de correspondance entre les codes de pays et les traductions de nos salutations
         $greetings = ["FR" => "Bonjour", "DE" => "Guten Tag", "UK" => "Hello"];
-        //on vérifie toujours que les données utilisateurs soieent bien correctes; ici il nous faut nous assurer que le code pays reçu soit bien un des codes pays que l'on gère dans notre tableau
+        //on vérifie toujours que les données utilisateurs soient bien correctes; ici il nous faut nous assurer que le code pays reçu soit bien un des codes pays que l'on gère dans notre tableau
         //si le code pays reçu est bien disponible en tant que clé dans notre tableau de salutations
         if (array_key_exists($countryCode, $greetings)) {
             //on affiche notre salutation
