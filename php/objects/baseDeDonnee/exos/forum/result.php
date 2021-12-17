@@ -35,7 +35,7 @@ try { // on essaye et s'il y a un problème alors on affiche un message d'erreur
 
     // on écrit la requette pour l'enregistrement
     $query = "insert into user 
-                (nom, prenom, login, password, roles_id, date_inscription)
+                (nom, prenom, login, mot_de_passe, roles_id, date_inscription)
               values
                 ('{$_POST['nom']}', '{$_POST['prenom']}', '{$_POST['login']}', '{$_POST['password']}', 1, now())";
 
