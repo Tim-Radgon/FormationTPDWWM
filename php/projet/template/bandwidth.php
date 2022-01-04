@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>bandwidth</title>
-</head>
-<body>
-<form method="POST" action="result.php">
+<form method="POST" action="">
     Convertir
     <input type="number" name="bit">
     <select name="val1">
@@ -31,5 +24,3 @@
     </select>
     <input type="submit" value="Convertir">
 </form>
-</body>
-</html>
