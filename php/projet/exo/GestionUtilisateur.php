@@ -58,7 +58,7 @@ class GestionUtilisateur
         $html = '';
 
         while ($result = $prepare->fetch()) { // tant qu'il y a un enregistrement alors on boucle
-            $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['password']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
+            $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['mot_de_passe']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
         }
 
         return $html;
