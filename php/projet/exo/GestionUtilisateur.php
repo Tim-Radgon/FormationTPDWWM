@@ -3,30 +3,22 @@
 class GestionUtilisateur
 {
     private $connexion;
+    
 
-    private $nom;
-    private $prenom;
-    private $login;
-    private $password;
-
-    public function __construct($connexion, $nom, $prenom, $login, $password)
+    public function __construct($connexion)
     {
         $this->connexion = $connexion;
 
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->login = $login;
-        $this->password = $password;
     }
 
-    public function inscription()
+    public function inscription($nom, $prenom, $login, $password)
     {
         try {
 
             $query = "insert into user 
                 (nom, prenom, login, mot_de_passe, roles_id, date_inscription)
               values
-                ('{$this->nom}', '{$this->prenom}', '{$this->login}', '{$this->password}', 1, now())";
+                ('$nom', '$prenom', '$login', '$password', 1, now())";
 
             $prepare = $this->connexion->prepare($query);
             $prepare->execute();
