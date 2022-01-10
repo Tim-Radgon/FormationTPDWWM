@@ -24,12 +24,13 @@ class GestionUtilisateur
         try {
 
             $query = "insert into user 
-                (nom, prenom, login, password, roles_id, date_inscription)
+                (nom, prenom, login, mot_de_passe, roles_id, date_inscription)
               values
                 ('{$this->nom}', '{$this->prenom}', '{$this->login}', '{$this->password}', 1, now())";
 
             $prepare = $this->connexion->prepare($query);
-            $prepare->execute(); // puis on execute sa requete
+            $prepare->execute();
+            return 'inscription bien effectué';// puis on execute sa requete
         } catch (PDOException $exception) {
             if ('dev' === APP_ENV) {
                 var_dump($exception);

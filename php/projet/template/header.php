@@ -12,6 +12,7 @@
             <li><a href="edf.php" class="">EDF</a></li>
             <li><a href="randNums.php" class="">Nombre aléatoire</a></li>
             <li><a href="volumeCone.php" class="">Calcul volume d'un cône</a></li>
+            <li><a href="forum.php" class="">Inscription</a></li>
         </ul>
     </nav>
 </header>
