@@ -3,7 +3,7 @@
 class GestionUtilisateur
 {
     private $connexion;
-    
+
 
     public function __construct($connexion)
     {
@@ -22,7 +22,7 @@ class GestionUtilisateur
 
             $prepare = $this->connexion->prepare($query);
             $prepare->execute();
-            return 'inscription bien effectué';// puis on execute sa requete
+            return 'inscription bien effectué<br>';// puis on execute sa requete
         } catch (PDOException $exception) {
             if ('dev' === APP_ENV) {
                 var_dump($exception);
@@ -56,4 +56,26 @@ class GestionUtilisateur
         return $html;
     }
 
+    public function findById()
+    {
+        try { // on essaye et si il y a un problème alors on affiche un message d'erreur adapté
+            $prepare = $this->connexion->prepare('SELECT * FROM user WHERE id = 20');
+            $prepare->execute();
+        } catch (PDOException $e) {
+            if ('dev' === APP_ENV) {
+                var_dump($e);
+                die();
+            } else {
+                die("La lecture de la base de donnée ne marche pas<br>Veuillez contacter votre administrateur");
+            }
+        }
+
+        $html = '';
+
+        while ($result = $prepare->fetch()) { // tant qu'il y a un enregistrement alors on boucle
+            $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['mot_de_passe']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
+        }
+
+        return $html;
+    }
 }
