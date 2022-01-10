@@ -56,10 +56,10 @@ class GestionUtilisateur
         return $html;
     }
 
-    public function findById()
+    public function findById($id)
     {
         try { // on essaye et si il y a un problème alors on affiche un message d'erreur adapté
-            $prepare = $this->connexion->prepare('SELECT * FROM user WHERE id = 20');
+            $prepare = $this->connexion->prepare('SELECT * FROM user WHERE id =' . $id);
             $prepare->execute();
         } catch (PDOException $e) {
             if ('dev' === APP_ENV) {
@@ -72,7 +72,8 @@ class GestionUtilisateur
 
         $html = '';
 
-        while ($result = $prepare->fetch()) { // tant qu'il y a un enregistrement alors on boucle
+        $result = $prepare->fetch();
+        { // tant qu'il y a un enregistrement alors on boucle
             $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['mot_de_passe']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
         }
 

@@ -16,6 +16,6 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['login'])
 
 }
 $resultat .= $gestionUtilisateur->find();
-$resultat .= $gestionUtilisateur->findById();
+$resultat .= $gestionUtilisateur->findById(78);
 
 body('template/forumTPL.php', $resultat);
