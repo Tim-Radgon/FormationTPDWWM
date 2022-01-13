@@ -1,18 +1,26 @@
-<header>
-    Logo et mise en page à faire ici<br>
-    Dans header.php, vous devez ajouter les liens de vos exercices <br>
+<header class="container-lg">
+    <div class="justify-content-center d-none d-lg-flex ">
+        <img class="logo me-1" src="apple.svg" width="40" alt="Projet Alkas"><span class="nomdusite">Alkas Projet</span>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.php" class="">Accueil</a></li>
-            <li><a href="des.php" class="">Jeu de des</a></li>
-            <li><a href="bandwidth.php" class="">Bande Passante</a></li>
-            <li><a href="calculatrice.php" class="">Calculatrice</a></li>
-            <li><a href="dayOfTheWeek.php" class="">Jour de la Semaine</a></li>
-            <li><a href="edf.php" class="">EDF</a></li>
-            <li><a href="randNums.php" class="">Nombre aléatoire</a></li>
-            <li><a href="volumeCone.php" class="">Calcul volume d'un cône</a></li>
-            <li><a href="forum.php" class="">Forum</a></li>
-        </ul>
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light ms-3 me-3">
+        <div class="navbar-brand d-sm-block d-lg-none"><img class="me-1" src="microsoft.svg" width="40"><span
+                    class="nomdusite">Alkas Projet</span></div>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.php" class="nav-link <?= $menu === 'accueil' ? 'active' : '' ?>">accueil</a>
+                </li>
+                <li class="nav-item"><a href="des.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">jeu de
+                        des</a></li>
+                <li class="nav-item"><a href="forum.php"
+                                        class="nav-link <?= $menu === 'forum' ? 'active' : '' ?>">forum</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
