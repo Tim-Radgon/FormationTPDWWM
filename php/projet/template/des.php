@@ -2,6 +2,8 @@
 <form action="" method="post">
 
     <label for="dice">Formule de dés</label>
-    <input type="text" name="dice" id="dice">
+    <input type="text" name="dice" id="dice" value="<?= $_SESSION['dice'] ?? '' ?>">
+
     <input type="submit" value="Jet de dé(s)">
+
 </form>

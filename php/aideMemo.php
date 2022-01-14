@@ -304,7 +304,7 @@ $motdepasseCrypte = '$2y$10$gxLQF12uzPb9qw34z/TfwOpmEYFI0rFc4wB1zDrMXutrbtzDQP.8
 // Puis il faudra dans un second temps vérifier le mot de passe saisie dans le formulaire
 // avec celui de la base de donnée avec la fonction password_verify
 // exemple
-if (password_verify($passwordDeMaBaseDeDonnee, $motdepasseCryptePrecedement)) {
+if (password_verify($_POST['password'], $motdepasseCrypte)) {
     echo 'mot de passe correct';
 } else {
     echo 'Votre mot de passe est invalide';

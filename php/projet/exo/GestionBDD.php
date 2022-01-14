@@ -6,7 +6,7 @@ class GestionBDD
     {
     }
 
-    public function connexion()
+    public function connexion(): PDO
     {
         try {
             $connexion = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',

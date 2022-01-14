@@ -2,23 +2,27 @@
 
 class JeuDeDes
 {
-    private $des;
+//    private $des;
+    private $request;
 
     /**
-     * On crée ici un construteur qui a besoin du résultat de notre formulaire pour le traiter après
+     * On crée ici un constructeur qui a besoin du résultat de notre formulaire pour le traiter après
      *
      * On ne doit jamais trouver ici de variable global telle que des $_POST ou $_GET
      * c'est pourquoi on utilise un constructeur qui a un paramètre et on va lui transmettre la valeur de notre post ou get quand on va l'instancier
      */
-    public function __construct($des) // $des = $_POST["dice"];
+    public function __construct(Request $request) // $des = $_POST["dice"];
     {
-        $this->des = $des;
+        $this->request = $request;
+//        $this->des = $des;
     }
 
     public function diceRoll()
     {
         //On sépare la chaîne de l'utilisateur en utilisant les + comme séparateur
-        $diceList = explode("+", mb_strtoupper($this->des));
+        $diceList = explode("+", mb_strtoupper($this->request->getPost('dice')));
+
+        $_SESSION['dice'] = $this->request->getPost('dice');
         //on se prépare à compter
         $total = 0;
         //pour chaque dè dans notre tableau de valeurs de dès
@@ -36,6 +40,8 @@ class JeuDeDes
                 $total += $dieValues[0];
             }
         }
+
+        $_SESSION['dice_total'] = $total;
 
         return $total;
     }
