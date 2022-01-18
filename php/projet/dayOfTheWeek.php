@@ -1,6 +1,6 @@
 <?php
 
-require('exo/dayOfTheWeek.php');
+require('exos/dayOfTheWeek.php');
 require('util.php');
 
 $result = '';

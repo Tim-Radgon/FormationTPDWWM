@@ -14,18 +14,19 @@
 
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.php" class="nav-link <?= $menu === 'accueil' ? 'active' : '' ?>">accueil</a>
+                <li class="nav-item"><a href="index.php" class="nav-link <?= $menu === 'accueil' ? 'active' : '' ?>">Accueil</a>
                 </li>
                 <li class="nav-item"><a href="des.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">jeu de
                         des</a></li>
 
 
-                <li class="nav-item"><a href="aleat.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">aléatoire</a>
+                <li class="nav-item"><a href="randNums.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">Nombre
+                        Aléatoire</a>
                 </li>
 
 
-                <li class="nav-item"><a href="forum.php"
-                                        class="nav-link <?= $menu === 'forum' ? 'active' : '' ?>">forum</a></li>
+                <li class="nav-item"><a href="forumTPL.php"
+                                        class="nav-link <?= $menu === 'forum' ? 'active' : '' ?>">Forum</a></li>
 
 
             </ul>

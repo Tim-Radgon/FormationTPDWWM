@@ -1,5 +1,5 @@
 <?php
-require('exo/RandNums.php');
+require('exos/randNums/Randnums.php');
 require('util.php');
 
 $result = '';

@@ -1,9 +1,9 @@
 <?php
-require('exo/GestionBDD.php');
+require('exos/GestionBDD.php');
 require('config.php');
 require('util.php');
-require('exo/GestionUtilisateur.php');
-require('exo/Request.php');
+require('exos/forum/GestionUtilisateur.php');
+require('exos/Request.php');
 
 $request = new Request($_POST);
 $gestionBDD = new GestionBDD();

@@ -1,5 +1,5 @@
 <?php
-require('exo/Request.php');
+require('exos/Request.php');
 
 //$request = new Request($_POST);
 //

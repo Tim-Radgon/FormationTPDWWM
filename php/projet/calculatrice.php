@@ -1,5 +1,5 @@
 <?php
-require('exo/Calculatrice.php'); // charge la class de notre exercise
+require('exos/calculatrice.php'); // charge la class de notre exercise
 require('util.php');
 
 $resultat = '';
