@@ -3,7 +3,7 @@
 class GestionUtilisateur
 {
     private $connexion;
-//    public const TEST = 'test';
+//    public const CONSTANTE = 'test';
 
 //    private $nom;
 //    private $prenom;
@@ -19,9 +19,9 @@ class GestionUtilisateur
      * Inscrit un nouvelle utilisateur dans la base de donnée
      *
      * @param Request $request
-     * @return string
+     * @return array
      */
-    public function inscription(Request $request): string
+    public function inscription(Request $request): array
     {
         try {
             $nom = $request->getPost('nom'); // $nom = $_POST['nom'];
@@ -50,7 +50,7 @@ class GestionUtilisateur
                 $_SESSION['prenom'] = $prenom;
                 $request->setSession('prenom', $prenom);
 
-                return "Utilisateur bien enregistré <br>";
+                return ['result' => "Utilisateur bien enregistré <br>"];
             }
         } catch (PDOException $exception) {
             if ('dev' === APP_ENV) {
@@ -66,7 +66,22 @@ class GestionUtilisateur
             }
         }
 
-        return '';
+        return ['result' => ''];
+    }
+
+    public function connect($login, $password)
+    {
+        $login = "noemi25@grondin.com";
+        $password = 'test';
+
+        $query = 'select * from user where `login` = :login and :password';
+        $query = 'select * from user where `login` = "noemi25@grondin.com" and "test"';
+
+        $prepare = $this->connexion->prepare($query);
+        $prepare->execute([
+            ':login' => $login,
+            ':password' => $password,
+        ]);
     }
 
 
@@ -74,7 +89,7 @@ class GestionUtilisateur
      * Retourne 10 utilisateurs
      * @return string|void
      */
-    public function find()
+    public function find(): array
     {
         try { // on essaye et si il y a un problème alors on affiche un message d'erreur adapté
             $html = '';
@@ -86,12 +101,16 @@ class GestionUtilisateur
 
             $prepare->execute();
 
-            while ($result = $prepare->fetch(PDO::FETCH_ASSOC)) { // tant qu'il y a un enregistrement alors on boucle
-                $_SESSION['bad_user'] = $result;
-                $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['password']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
-            }
+            $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
-            return $html;
+            return ['result' => '', 'listUser' => $result];
+
+//            while($result = $prepare->fetch(PDO::FETCH_ASSOC)) { // tant qu'il y a un enregistrement alors on boucle
+//                $_SESSION['bad_user'] = $result;
+//                $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['password']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
+//            }
+//
+//            return $html;
         } catch (PDOException $e) {
             if ('dev' === APP_ENV) {
                 var_dump($e);

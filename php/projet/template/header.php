@@ -18,8 +18,16 @@
                 </li>
                 <li class="nav-item"><a href="des.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">jeu de
                         des</a></li>
+
+
+                <li class="nav-item"><a href="aleat.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">aléatoire</a>
+                </li>
+
+
                 <li class="nav-item"><a href="forum.php"
                                         class="nav-link <?= $menu === 'forum' ? 'active' : '' ?>">forum</a></li>
+
+
             </ul>
         </div>
     </nav>
