@@ -8,11 +8,11 @@ $request = new Request($_POST);
 $request->sessionDestroy();
 
 $result = '';
-if (!empty($_POST['radius']) && !empty($_POST['height']) && isset($_POST['round'])) {
+if (!empty($_POST['radius']) && !empty($_POST['height'])) {
     $volumeCone = new VolumeCone(
         $_POST['radius'],
         $_POST['height'],
-        $_POST['round']
+        $_POST['round'] ?? ""
     );
 
     $result = $volumeCone->result();

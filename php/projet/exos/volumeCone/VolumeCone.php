@@ -15,27 +15,24 @@ class VolumeCone
 
     public function result()
     {
-        if (isset($this->radius) && isset($this->height)) {
 //on récupère les valeurs de notre formulaire
-            $radius = $this->radius;
-            $height = $this->height;
-            //on vérifie que les valeurs envoyées soient bien des nombres
-            if (is_numeric($radius) && is_numeric($height)) {
-                //on effectue notre calcul :
-                $result = (pi() * $radius ** 2 * $height) / 3;
-                //si la case à cocher pour arrondir est cochée
-                if (isset($this->round)) {
-                    //renvoi du résultat arrondi
-                    return round($result);
-                } else {
-                    //sinon renvoi du résultat complet
-                    return $result;
-                }
+        $radius = $this->radius;
+        $height = $this->height;
+        //on vérifie que les valeurs envoyées soient bien des nombres
+        if (is_numeric($radius) && is_numeric($height)) {
+            //on effectue notre calcul :
+            $result = (pi() * $radius ** 2 * $height) / 3;
+            //si la case à cocher pour arrondir est cochée
+            if ($this->round) {
+                //renvoi du résultat arrondi
+                return round($result);
             } else {
-                return "Veuillez envoyer des nombres";
+                //sinon renvoi du résultat complet
+                return $result;
             }
         } else {
-            return "Erreur de formulaire";
+            return "Veuillez envoyer des nombres";
         }
+
     }
 }
