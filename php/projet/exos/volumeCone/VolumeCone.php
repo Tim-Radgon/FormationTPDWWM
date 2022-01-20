@@ -2,19 +2,40 @@
 
 class VolumeCone
 {
-    private $number1;
-    private $number2;
+    private $radius;
+    private $height;
     private $round;
 
-    public function __construct($number1, $number2, $round)
+    public function __construct($radius, $height, $round)
     {
-        $this->number1 = $number1;
-        $this->number2 = $number2;
+        $this->radius = $radius;
+        $this->height = $height;
         $this->round = $round;
     }
 
     public function result()
     {
-
+        if (isset($this->radius) && isset($this->height)) {
+//on récupère les valeurs de notre formulaire
+            $radius = $this->radius;
+            $height = $this->height;
+            //on vérifie que les valeurs envoyées soient bien des nombres
+            if (is_numeric($radius) && is_numeric($height)) {
+                //on effectue notre calcul :
+                $result = (pi() * $radius ** 2 * $height) / 3;
+                //si la case à cocher pour arrondir est cochée
+                if (isset($this->round)) {
+                    //renvoi du résultat arrondi
+                    return round($result);
+                } else {
+                    //sinon renvoi du résultat complet
+                    return $result;
+                }
+            } else {
+                return "Veuillez envoyer des nombres";
+            }
+        } else {
+            return "Erreur de formulaire";
+        }
     }
 }

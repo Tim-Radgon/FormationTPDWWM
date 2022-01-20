@@ -8,3 +8,13 @@ $request = new Request($_POST);
 $request->sessionDestroy();
 
 $result = '';
+if (!empty($_POST['radius']) && !empty($_POST['height']) && isset($_POST['round'])) {
+    $volumeCone = new VolumeCone(
+        $_POST['radius'],
+        $_POST['height'],
+        $_POST['round']
+    );
+
+    $result = $volumeCone->result();
+}
+body("template/volumeCone.php", $result);
