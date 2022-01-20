@@ -14,7 +14,7 @@
 
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.php" class="nav-link <?= $menu === 'accueil' ? 'active' : '' ?>">Accueil</a>
+                <li class="nav-item"><a href="../index.php" class="nav-link <?= $menu === 'accueil' ? 'active' : '' ?>">Accueil</a>
                 </li>
                 <li class="nav-item"><a href="des.php" class="nav-link <?= $menu === 'des' ? 'active' : '' ?>">jeu de
                         des</a></li>
@@ -25,7 +25,7 @@
                 </li>
 
 
-                <li class="nav-item"><a href="forumTPL.php"
+                <li class="nav-item"><a href="../forum.php"
                                         class="nav-link <?= $menu === 'forum' ? 'active' : '' ?>">Forum</a></li>
 
 
