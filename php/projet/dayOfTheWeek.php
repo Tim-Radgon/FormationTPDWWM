@@ -8,3 +8,9 @@ $request = new Request($_POST);
 $request->sessionDestroy();
 
 $result = '';
+if (!empty($_POST['date'])) {
+    $dayOfTheWeek = new DayOfTheWeek(
+        $_POST['date']
+    );
+}
+body("template/dayOfTheWeek.php", $result);

@@ -12,6 +12,7 @@
             <li><a href="calculatrice.php">Calculatrice</a></li>
             <li><a href="volumeCone.php">Volume d'un Cône</a></li>
             <li><a href="bandwidth.php">Bande Passante</a></li>
+            <li><a href="dayOfTheWeek.php">Jour de la Semaine</a></li>
 
         </ul>
     </div>
