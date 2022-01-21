@@ -15,10 +15,10 @@ if (!empty($_SESSION['user'])) {
 
 $resultat = '';
 
-if (!empty($_POST['login']) && !empty($_POST['password'])) {
+if (!empty($_POST['login']) && !empty($_POST['mot_de_passe'])) {
     $connexionBDD = $gestionBDD->connexion();
 
-    $resultat = $securite->loginv1($connexionBDD, $_POST['login'], $_POST['password']);
+    $resultat = $securite->loginv1($connexionBDD, $_POST['login'], $_POST['mot_de_passe']);
 }
 
 body('template/securiteTPL.php', $resultat);

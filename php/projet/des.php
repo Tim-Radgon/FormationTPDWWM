@@ -6,12 +6,12 @@ require('util.php');
 
 $request = new Request($_POST);
 
-//if(count($_SESSION)) {
-echo !empty($_SESSION['favcolor']) ? $_SESSION['favcolor'] . '<br>' : 'Pas de couleur selectionné<br>'; // green
-echo !empty($_SESSION['animal']) ? $_SESSION['animal'] . '<br>' : 'Pas d animaux<br>';   // cat
-echo !empty($_SESSION['time']) ? date('Y m d H:i:s', $_SESSION['time']) . '<br>' : 'Aucune date selectionné';
-echo $_SESSION['user_id'] ?? 'Pas connecté';
-//}
+////if(count($_SESSION)) {
+//echo !empty($_SESSION['favcolor']) ? $_SESSION['favcolor'] . '<br>' : 'Pas de couleur selectionné<br>'; // green
+//echo !empty($_SESSION['animal']) ? $_SESSION['animal'] . '<br>' : 'Pas d animaux<br>';   // cat
+//echo !empty($_SESSION['time']) ? date('Y m d H:i:s', $_SESSION['time']) . '<br>' : 'Aucune date selectionné';
+//echo $_SESSION['user_id'] ?? 'Pas connecté';
+////}
 
 $resultat = '';
 

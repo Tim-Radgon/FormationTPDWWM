@@ -16,7 +16,7 @@ if ($request->getSession('user')) {
 $resultat = '';
 
 $connexionBDD = $gestionBDD->connexion();
-if (!empty($_POST['login']) && !empty($_POST['password'])) {
-    $resultat = $securite->loginv2($connexionBDD, $_POST['login'], $_POST['password']);
+if (!empty($_POST['login']) && !empty($_POST['mot_de_passe'])) {
+    $resultat = $securite->loginv2($connexionBDD, $_POST['login'], $_POST['mot_de_passe']);
 }
 body('template/securiteTPL.php', $resultat);

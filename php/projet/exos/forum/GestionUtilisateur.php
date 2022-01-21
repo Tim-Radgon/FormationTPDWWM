@@ -12,7 +12,7 @@ class GestionUtilisateur
     }
 
     /**
-     * Inscrit un nouvelle utilisateur dans la base de donnée
+     * Inscrit un nouvel utilisateur dans la base de donnée
      *
      * @param Request $request
      * @return array
@@ -29,9 +29,9 @@ class GestionUtilisateur
                 $password = password_hash($password, PASSWORD_DEFAULT);
 
                 $query = "insert into user 
-                            (nom, prenom, login, password, roles_id, date_inscription)
+                            (nom, prenom, login, mot_de_passe, roles_id, date_inscription)
                           values
-                            (:nom, :prenom, :login, :password, 1, now())";
+                            (:nom, :prenom, :login, :mot_de_passe, 1, now())";
 
                 $prepare = $this->connexion->prepare($query);
 //                $prepare->bindParam('prenom', $prenom, PDO::PARAM_STR, 10);
@@ -41,7 +41,7 @@ class GestionUtilisateur
                         'nom' => $nom,
                         'prenom' => $prenom,
                         'login' => $login,
-                        'password' => $password
+                        'mot_de_passe' => $password
                     ]
                 ); // puis on execute sa requête
 
@@ -118,5 +118,4 @@ class GestionUtilisateur
             }
         }
     }
-
 }
