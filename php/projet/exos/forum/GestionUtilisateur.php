@@ -3,12 +3,8 @@
 class GestionUtilisateur
 {
     private $connexion;
-//    public const CONSTANTE = 'test';
 
-//    private $nom;
-//    private $prenom;
-//    private $login;
-//    private $password;
+//    public const CONSTANTE = 'test';
 
     public function __construct(PDO $connexion)
     {
@@ -38,14 +34,16 @@ class GestionUtilisateur
                             (:nom, :prenom, :login, :password, 1, now())";
 
                 $prepare = $this->connexion->prepare($query);
-//            $prepare->bindParam('prenom', $prenom, PDO::PARAM_STR, 10);
+//                $prepare->bindParam('prenom', $prenom, PDO::PARAM_STR, 10);
 
-                $prepare->execute([
-                    'nom' => $nom,
-                    'prenom' => $prenom,
-                    'login' => $login,
-                    'password' => $password
-                ]); // puis on execute sa requête
+                $prepare->execute(
+                    [
+                        'nom' => $nom,
+                        'prenom' => $prenom,
+                        'login' => $login,
+                        'password' => $password
+                    ]
+                ); // puis on execute sa requête
 
                 $_SESSION['prenom'] = $prenom;
                 $request->setSession('prenom', $prenom);

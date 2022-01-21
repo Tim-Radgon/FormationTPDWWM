@@ -5,6 +5,7 @@
  *
  * @param string $nomDuFichier
  * @param string|null $resultat
+ * @param array|null $detail
  * @return void
  */
 function body(string $nomDuFichier, string $resultat = null, array $detail = []): void

@@ -9,7 +9,7 @@ class DayOfTheWeek
         $this->date = $date;
     }
 
-    public function result()
+    public function jours()
     {
         $date = $this->date;
         $dateArray = explode("-", $date);

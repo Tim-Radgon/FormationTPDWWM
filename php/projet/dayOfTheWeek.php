@@ -7,10 +7,11 @@ require('exos/Request.php');
 $request = new Request($_POST);
 $request->sessionDestroy();
 
-$result = '';
+$jours = '';
 if (!empty($_POST['date'])) {
     $dayOfTheWeek = new DayOfTheWeek(
         $_POST['date']
     );
+    $jours = $dayOfTheWeek->jours();
 }
-body("template/dayOfTheWeek.php", $result);
+body("template/dayOfTheWeek.php", $jours);
