@@ -13,6 +13,7 @@
             <li><a href="volumeCone.php">Volume d'un Cône</a></li>
             <li><a href="bandwidth.php">Bande Passante</a></li>
             <li><a href="dayOfTheWeek.php">Jour de la Semaine</a></li>
+            <li><a href="edf.php">Edf</a></li>
             <li><a href="loginv1.php">Connexion Version 1</a></li>
             <li><a href="loginv2.php">Connexion Version 2</a></li>
 
