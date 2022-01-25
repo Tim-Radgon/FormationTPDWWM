@@ -12,7 +12,7 @@ class GestionUtilisateur
     }
 
     /**
-     * Inscrit un nouvel utilisateur dans la base de donnée
+     * Inscrit un nouvelle utilisateur dans la base de donnée
      *
      * @param Request $request
      * @return array
@@ -29,9 +29,9 @@ class GestionUtilisateur
                 $password = password_hash($password, PASSWORD_DEFAULT);
 
                 $query = "insert into user 
-                            (nom, prenom, login, mot_de_passe, roles_id, date_inscription)
+                            (nom, prenom, login, password, roles_id, date_inscription)
                           values
-                            (:nom, :prenom, :login, :mot_de_passe, 1, now())";
+                            (:nom, :prenom, :login, :password, 1, now())";
 
                 $prepare = $this->connexion->prepare($query);
 //                $prepare->bindParam('prenom', $prenom, PDO::PARAM_STR, 10);
@@ -41,7 +41,7 @@ class GestionUtilisateur
                         'nom' => $nom,
                         'prenom' => $prenom,
                         'login' => $login,
-                        'mot_de_passe' => $password
+                        'password' => $password
                     ]
                 ); // puis on execute sa requête
 
@@ -90,10 +90,7 @@ class GestionUtilisateur
     public function find(): array
     {
         try { // on essaye et si il y a un problème alors on affiche un message d'erreur adapté
-            $html = '';
-
             $query = 'select * from user order by date_inscription desc limit 10';
-//            $query = 'select * from user';
 
             $prepare = $this->connexion->prepare($query);
 
@@ -101,14 +98,7 @@ class GestionUtilisateur
 
             $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
-            return ['result' => '', 'listUser' => $result];
-
-//            while($result = $prepare->fetch(PDO::FETCH_ASSOC)) { // tant qu'il y a un enregistrement alors on boucle
-//                $_SESSION['bad_user'] = $result;
-//                $html .= "id: {$result['id']}, login: {$result['login']}, password: {$result['password']}, prenom: {$result['prenom']}, nom: {$result['nom']}<br>";
-//            }
-//
-//            return $html;
+            return ['result' => '', 'listUser' => $result, 'menu' => 'forum'];
         } catch (PDOException $e) {
             if ('dev' === APP_ENV) {
                 var_dump($e);
@@ -118,4 +108,5 @@ class GestionUtilisateur
             }
         }
     }
+
 }

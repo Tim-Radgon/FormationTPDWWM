@@ -2,23 +2,19 @@
 require('exos/randNums/Randnums.php');
 require('util.php');
 
-require('exos/Request.php');
-
-$request = new Request($_POST);
-$request->sessionDestroy();
-
+session_start();
 $result = '';
 
 if (!empty($_POST['min']) &&
     !empty($_POST['max']) &&
     isset($_POST['nombreValeurs'])) {
-    $randNums = new Randnums(
+    $aleat = new Aleat(
         $_POST['min'],
         $_POST['max'],
         $_POST['nombreValeurs']
     );
 
-    $result = $randNums->result();
+    $result = $aleat->result();
 }
 
-body("template/randNums.php", $result);
+body("template/randNums.php", $result, ['menu' => 'randNums']);

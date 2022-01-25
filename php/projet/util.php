@@ -10,7 +10,9 @@
  */
 function body(string $nomDuFichier, string $resultat = null, array $detail = []): void
 {
-    $menu = '';
+    if ($detail) {
+        extract($detail, EXTR_SKIP);
+    }
 
     require('./template/body.php');
 }
