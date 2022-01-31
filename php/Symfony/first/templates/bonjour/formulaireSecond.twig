@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h1>mon formulaire second</h1>
+    {{ cequejaitape }}
+    {# {{ form(formulaire) }} formulaire automatique #}
+
+    {{ form_start(formulaire) }}{# <form action="" method="post"> #}
+    <aside style="float: left;
+        width: 49.3%; ">{{ form_row(formulaire.prenom) }}</aside>
+    <aside style="width: 49.3%; float: right;">{{ form_row(formulaire.cle) }}</aside>
+
+    <input type="submit">
+
+    {{ form_end(formulaire) }}{# </form> #}
+
+
+    {# <form action="" method="post"> #}
+    {# <input type="text" name="champ" value=""> #}
+    {# <input type="submit" value="Envoyez"> #}
+    {# </form> #}
+
+
+
+{% endblock %}
