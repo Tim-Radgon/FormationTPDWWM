@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DesController!{% endblock %}
+
+{% block body %}
+    <form action="" method="post">
+
+        <label for="dice">Formule de dés</label>
+        <input type="text" name="dice" id="dice" valeur="{{ dice }}">
+        <input type="submit" value="Jet de dé(s)">
+
+    </form>
+    resultat {{ total }}
+
+{% endblock %}
