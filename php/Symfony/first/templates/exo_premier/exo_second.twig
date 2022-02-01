@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    coucou,
+    {# {{ clealacon }} #}
+
+    {# {{ form(formulaire) }} #}
+
+    {# {{ form_start(formulaire) }} #}
+
+    {# {{ form_label(formulaire.prenom) }} #}
+    {# {{ form_widget(formulaire.prenom) }} #}
+    {# {{ form_row(formulaire.prenom) }} #}
+
+    {# <input type="submit" value="Inscription"> #}
+
+    {# {{ form_end(formulaire) }} #}
+
+
+    {{ form_start(formulaire) }}
+
+    {{ form_row(formulaire.prenom) }}
+    {{ form_row(formulaire.nom) }}
+    {{ form_row(formulaire.email) }}
+    {{ form_row(formulaire.login) }}
+    {{ form_row(formulaire.password) }}
+
+    <input type="submit" value="Inscription">
+
+    {{ form_end(formulaire) }}
+
+    {% if isFormSend %}
+        {% if isEmailValid %}
+            <p>Mon email est valid</p>
+        {% else %}
+            <p>
+                Mon Email n'est pas valid</p>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
