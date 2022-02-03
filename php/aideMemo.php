@@ -53,6 +53,24 @@ $a = isset($variable) ? $variable : 'valeur par defaut';
 // l'avantage est que l'on va éviter de dupliquer son code
 $a = $variable ?: 'valeur par defaut';
 
+// condition d'égalité multiple
+// Si (dans le cas suivant) $voiture est = à EriMobile alors execute le cas EricMobile et aussi NicolasMobile car tant que
+// la condition ne rencontre pas de break alors il exécute tous les cas suivants.
+switch ($voiture) {
+    case 'EricMobile':
+        // traitement d'Eric Mobile
+        echo('Eric Mobile est selectionné');
+
+    case 'NicolasMobile':
+        // traitement de Nicolas Mobile
+        echo('Nicolas Mobile est selectionné');
+        break;
+
+    case 'DjibrilMobile':
+        echo('Djibril Mobile est selectionné');
+        break;
+}
+
 
 // $i++ revient à dire $i = $i + 1;
 // $i-- revient à dire $i = $i - 1;
