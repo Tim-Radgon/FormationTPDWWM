@@ -65,3 +65,42 @@ php bin/console make:migration
 Lance les requetes sql
 
 php bin/console doctrine:migrations:migrate
+
+Autre possibilité de mettre à jour sa base de donnée
+
+php bin/console doctrine:schema:update --dump-sql
+
+--dump-sql permet de voir toutes les requetes qu'il va faire
+une fois qu'on a vérifié alors on peut executer les requetes
+
+php bin/console doctrine:schema:update --force
+
+### Création d'utilisateur
+
+Création d'un utilisateur en utilisant les paramètres par défaut
+
+php bin/console make:user
+
+Authentification
+
+php bin/console make:auth
+
+Création du formulaire d'enregistrement
+
+php bin/console make:registration-form
+
+Modifier le premier role dans la base donnée, dans la table user
+
+["ROLE_ADMIN"]
+
+requete SQL pour le modifier directement
+
+UPDATE user SET roles = ["ROLE_ADMIN"] WHERE id=1;
+
+Pour permettre de vérifier un type d'utilisateur dans twig, il faudra installer extra-bundle
+
+composer require twig/extra-bundle
+
+en twig
+
+{% if is_granted('ROLE_ADMIN') %} blabla {% endif %}

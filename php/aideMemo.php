@@ -327,3 +327,16 @@ if (password_verify($_POST['password'], $motdepasseCrypte)) {
 } else {
     echo 'Votre mot de passe est invalide';
 }
+
+// Faire des tests unitaires
+// Il faut installer un package qui s'appelle PHPUnit
+// ça permet de tester des méthodes (d'une classe) et de s'assurer que cette méthode retourne toujours un résultat attendu
+// Exemple on a besoin de vérifier qu'une méthode de mot de passe soit valide si il y a 1 majuscule, 1 chiffre, 1 symbol
+// de tester différent mot de passe valid et invalid et de certifier que celui ci est valid
+composer require --dev phpunit / phpunit ^ 9
+
+// Expression régulière
+// C'est un fonction php preg_match ou preg_replace qui va executer un pattern (chaine de caractère) qui est un tas de condition
+// Exemple on a besoin de vérifier qu'une méthode de mot de passe soit valide si il y a 1 majuscule, 1 chiffre, 1 symbol
+preg_match();
+preg_replace(); // permet de remplacer par exemple un mot ou lettre par un autre
