@@ -104,3 +104,15 @@ composer require twig/extra-bundle
 en twig
 
 {% if is_granted('ROLE_ADMIN') %} blabla {% endif %}
+
+# API RestFul
+
+Il faut installer
+
+composer require symfony/http-client
+
+ça va nous permettre d'avoir accès à des api restful distante comme google maps ou de météo ou récupération des informations sur github ou autre
+
+voir ce site pour plus d'information
+
+https://symfony.com/doc/current/http_client.html
